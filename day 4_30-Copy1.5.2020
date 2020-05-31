@@ -1,0 +1,565 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "#loop control statements : break,continue\n",
+    "for i in range(1,11):\n",
+    "    if i % 5== 0:\n",
+    "        break\n",
+    "    else:\n",
+    "        print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "for i in range(1,11):\n",
+    "    if i % 5== 0:\n",
+    "        continue\n",
+    "    else:\n",
+    "        print(i)\n",
+    "1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#question1\n",
+    "#username: python\n",
+    "#password: abc123\n",
+    "while True:\n",
+    "    user = input(\"enetr your name:\")\n",
+    "    if user == \"python\":\n",
+    "        pwd = input(\"enetr your password\")\n",
+    "        if pwd ==\"abc123\":\n",
+    "            print(\"login successful!!!\")\n",
+    "            break\n",
+    "    else:\n",
+    "        continue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#pass--> for creating empty blocks\n",
+    "if 12<34:\n",
+    "    pass\n",
+    "else:\n",
+    "    print(\"else\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "functions:\n",
+    "block of statments\n",
+    "1.predefined(which are already) len(),print(),input()\n",
+    "2.user defined(custom)\n",
+    "def function_name(parameter list): statements return\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hello python\n",
+      "hello python\n"
+     ]
+    }
+   ],
+   "source": [
+    "def name(username):\n",
+    "    print(\"hello\",username)\n",
+    "name(\"python\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n",
+      "300\n",
+      "340\n",
+      "30\n",
+      "300\n",
+      "340\n"
+     ]
+    }
+   ],
+   "source": [
+    "def addition(a,b):\n",
+    "    return a+b\n",
+    "print(addition(10,20))\n",
+    "print(addition(100,200))\n",
+    "print(addition(120,220))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(30, -10, 200, 0.5)\n",
+      "(300, -100, 20000, 0.5)\n",
+      "(340, -100, 26400, 0.5454545454545454)\n",
+      "(30, -10, 200, 0.5)\n",
+      "(300, -100, 20000, 0.5)\n",
+      "(340, -100, 26400, 0.5454545454545454)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def addition(a,b):\n",
+    "    return a+b,a-b,a*b,a/b\n",
+    "print(addition(10,20))\n",
+    "print(addition(100,200))\n",
+    "print(addition(120,220))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n",
+      "-10\n",
+      "200\n",
+      "0.5\n",
+      "30\n",
+      "-10\n",
+      "200\n",
+      "0.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "#multiple return values\n",
+    "def arithematic(a,b):\n",
+    "    return a+b,a-b,a*b,a/b\n",
+    "add,sub,mul,div = (arithematic(10,20))\n",
+    "print(add)\n",
+    "print(sub)\n",
+    "print(mul)\n",
+    "print(div)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200\n",
+      "200\n"
+     ]
+    }
+   ],
+   "source": [
+    "# diff type of arguments\n",
+    "def add(a,b=100):\n",
+    "    return a+b\n",
+    "print(add(100))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a value: 10\n",
+      "b value: 20\n",
+      "a value: 10\n",
+      "b value: 20\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#keyword aruguments\n",
+    "def add(a,b):\n",
+    "    print(\"a value:\",a)\n",
+    "    print(\"b value:\",b)\n",
+    "    return(a+b)\n",
+    "add(10,20)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a value: 20\n",
+      "b value: 10\n",
+      "a value: 20\n",
+      "b value: 10\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def add(a,b):\n",
+    "    print(\"a value:\",a)\n",
+    "    print(\"b value:\",b)\n",
+    "    return(a+b)\n",
+    "add(b=10,a=20)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "variable length argument"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n",
+      "60\n",
+      "100\n",
+      "30\n",
+      "60\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "#(120,230,34,450,460)-->tuple\n",
+    "def add(*a):\n",
+    "    return sum(a)\n",
+    "print(add(10,20))\n",
+    "print(add(10,20,30))\n",
+    "print(add(10,20,30,40))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n",
+      "60\n",
+      "100\n",
+      "30\n",
+      "60\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "def mul(*a):\n",
+    "    m=1\n",
+    "    for i in a:\n",
+    "        m=m*i\n",
+    "    return m\n",
+    "print(add(10,20))\n",
+    "print(add(10,20,30))\n",
+    "print(add(10,20,30,40))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "49\n",
+      "343\n",
+      "49\n",
+      "343\n"
+     ]
+    }
+   ],
+   "source": [
+    "#nested functions :square,cube\n",
+    "def square(a):\n",
+    "    return a*a\n",
+    "def cube(b):\n",
+    "    return square(b)*b\n",
+    "print(square(7))\n",
+    "print(cube(7))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'list'>\n",
+      "<class 'list'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#list\n",
+    "list1 = [12,23.45,True,\"abc\",12]\n",
+    "print(type(list1))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 10, 20, 30]\n",
+      "[1, 2, 3, 1, 2, 3, 1, 2, 3]\n",
+      "2\n",
+      "[2, 3]\n",
+      "True\n",
+      "False\n",
+      "[1, 2, 3, 10, 20, 30]\n",
+      "[1, 2, 3, 1, 2, 3, 1, 2, 3]\n",
+      "2\n",
+      "[2, 3]\n",
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#perators supported by list :v+,*,[],[:],in,not in\n",
+    "list1 = [1,2,3]\n",
+    "list2 = [10,20,30]\n",
+    "print(list1+list2)#concatenation\n",
+    "print(list1*3)#repitition\n",
+    "print(list1[1])#2\n",
+    "print(list1[1:3])#[1,2]\n",
+    "print(2 in list1)\n",
+    "print(200 in list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'h'"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'h'"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list1=[1,2,3,\"python\"]\n",
+    "list1[3][3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "1\n",
+      "5\n",
+      "['p', 'y', 't', 'h', 'o', 'n']\n",
+      "[1, 2, 3, 4, 100]\n",
+      "5\n",
+      "1\n",
+      "5\n",
+      "['p', 'y', 't', 'h', 'o', 'n']\n",
+      "[1, 2, 3, 4, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Built-in functions: len(),min(),max(),list()\n",
+    "#using min and max all elements shiuld be same type\n",
+    "list1 =[1,2,3,4,5]\n",
+    "s1=\"python\"\n",
+    "print(len(list1))\n",
+    "print(min(list1))\n",
+    "print(max(list1))\n",
+    "list2=list(s1)\n",
+    "print(list2)\n",
+    "list1[-1]=100\n",
+    "print(list1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
